@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Il nostro accordo per lavorare bene insieme · Liceo Monti 2026–27</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f6;
+      --paper: #ffffff;
+      --text: #172b35;
+      --muted: #4c606a;
+      --accent: #126277;
+      --accent-soft: #e7f3f4;
+      --line: #cbd9dc;
+      --focus: #b34b13;
+    }
+    body.dark-mode {
+      color-scheme: dark;
+      --bg: #101b21;
+      --paper: #192a32;
+      --text: #f1f6f7;
+      --muted: #c4d7dc;
+      --accent: #8ee1e7;
+      --accent-soft: #23434b;
+      --line: #54717a;
+      --focus: #ffca85;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 Arial, Helvetica, sans-serif; }
+    .page { max-width: 920px; margin: 2rem auto; padding: 2.5rem 3rem; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 8px 28px #10263012; }
+    .eyebrow { color: var(--accent); font-size: .86rem; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
+    h1 { margin: .4rem 0 .6rem; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.15; }
+    .context { margin: 0 0 1.3rem; color: var(--muted); font-size: .96rem; }
+    .intro { padding: 1rem 1.2rem; background: var(--accent-soft); border-left: 5px solid var(--accent); border-radius: 4px 10px 10px 4px; }
+    .intro p { margin: 0; }
+    .controls { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.35rem 0 1.8rem; }
+    button { border: 1px solid var(--accent); border-radius: 8px; padding: .55rem .85rem; background: var(--paper); color: var(--text); font: inherit; font-size: .92rem; cursor: pointer; }
+    button:hover { background: var(--accent-soft); }
+    button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    button[aria-pressed="true"] { background: var(--accent-soft); font-weight: 700; }
+    section { margin-top: 1.65rem; }
+    h2 { margin: 0 0 .6rem; padding-bottom: .35rem; border-bottom: 2px solid var(--line); font-size: 1.35rem; line-height: 1.3; }
+    ol { padding-left: 1.55rem; margin: .6rem 0 0; }
+    li { padding-left: .25rem; margin-bottom: .65rem; break-inside: avoid; }
+    li::marker { color: var(--accent); font-weight: 700; }
+    .shared { padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: 10px; }
+    .shared h2 { border: 0; padding: 0; }
+    .shared p { margin: .55rem 0 0; }
+    .closing { margin: 1.6rem 0 0; color: var(--muted); font-size: .93rem; }
+    body.dsa-mode { font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 1.8; letter-spacing: .012em; }
+    body.dsa-mode .page { max-width: 840px; }
+    body.dsa-mode li { margin-bottom: 1rem; }
+    @media (max-width: 680px) { .page { margin: 0; padding: 1.4rem 1.15rem 2rem; border: 0; border-radius: 0; } }
+    @media print {
+      :root, body.dark-mode { color-scheme: light; --bg: #fff; --paper: #fff; --text: #111; --muted: #333; --accent: #164d5c; --accent-soft: #fff; --line: #777; }
+      body, body.dsa-mode { font-size: 11pt; line-height: 1.35; letter-spacing: normal; background: #fff; }
+      .page, body.dsa-mode .page { max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      .controls { display: none; }
+      h1 { font-size: 20pt; }
+      h2 { font-size: 13pt; }
+      section { margin-top: 1rem; }
+      li, body.dsa-mode li { margin-bottom: .3rem; }
+      .intro, .shared { break-inside: avoid; }
+      @page { size: A4; margin: 15mm; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Un patto da costruire e rivedere insieme</div>
+      <h1>Il nostro accordo per lavorare bene insieme</h1>
+      <p class="context">Liceo Monti di Chieri · Anno scolastico 2026–27 · Classi degli indirizzi linguistico e scienze umane · Matematica e fisica</p>
+      <div class="intro"><p>Vogliamo costruire lezioni in cui sia possibile capire, fare domande, provare, sbagliare e migliorare. Per riuscirci, il Prof. e gli studenti si assumono impegni reciproci.</p></div>
+    </header>
+
+    <div class="controls" aria-label="Impostazioni di lettura e stampa">
+      <button type="button" id="dark-toggle" aria-pressed="false">Tema scuro</button>
+      <button type="button" id="dsa-toggle" aria-pressed="false">Lettura facilitata DSA/BES</button>
+      <button type="button" id="print-button">Stampa l’accordo</button>
+    </div>
+
+    <section aria-labelledby="prof-title">
+      <h2 id="prof-title">Il Prof. si impegna a</h2>
+      <ol>
+        <li>Spiegare con chiarezza, mostrando i passaggi e il motivo delle scelte, senza dare per scontati i punti difficili.</li>
+        <li>Alternare spiegazioni, domande, esempi ed esercizi, dando spazio alla partecipazione della classe.</li>
+        <li>Usare schemi e parole chiave, costruendoli anche insieme agli studenti, e riprendere ciò che serve delle lezioni precedenti.</li>
+        <li>Collegare, quando è utile, matematica e fisica a situazioni concrete; proporre attività pratiche, di laboratorio, a coppie o in gruppo quando sono adatte all’argomento.</li>
+        <li>Ascoltare le domande e, se un concetto non è chiaro, provare a spiegarlo in un altro modo e con nuovi esempi.</li>
+        <li>Preparare alle verifiche con esercizi guidati e occasioni di ripasso, chiarendo quali conoscenze e abilità saranno richieste.</li>
+        <li>Assegnare lavoro a casa con uno scopo chiaro e un carico sostenibile, dando indicazioni per affrontare le difficoltà.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="studenti-title">
+      <h2 id="studenti-title">Gli studenti si impegnano a</h2>
+      <ol>
+        <li>Arrivare puntuali e con il materiale necessario. All’arrivo del Prof., concludere le conversazioni, riprendere il posto assegnato e prepararsi a lavorare.</li>
+        <li>Contribuire a un ambiente collaborativo e sufficientemente silenzioso: ascoltare chi parla, alzare la mano per intervenire ed evitare conversazioni che impediscono agli altri di seguire.</li>
+        <li>Partecipare alle attività, fare domande quando qualcosa non è chiaro e provare a spiegare il proprio ragionamento, anche quando non si è sicuri della risposta.</li>
+        <li>Svolgere con regolarità il lavoro a casa e segnalare i passaggi che non si è riusciti a capire, invece di lasciarli irrisolti.</li>
+        <li>Nei lavori a coppie o in gruppo, fare la propria parte, ascoltare le idee degli altri e aiutarsi senza sostituirsi a chi sta imparando.</li>
+        <li>Usare dispositivi e strumenti digitali in modo appropriato ed esclusivamente per le attività proposte.</li>
+        <li>Chiedere di andare in bagno nei primi cinque minuti o negli ultimi cinque minuti della lezione, salvo necessità urgenti, per non interrompere il lavoro della classe.</li>
+      </ol>
+    </section>
+
+    <section class="shared" aria-labelledby="comune-title">
+      <h2 id="comune-title">Un impegno comune</h2>
+      <p>Ci parliamo con rispetto. Gli errori sono occasioni per capire meglio, non motivi di imbarazzo. Se il ritmo, il carico di lavoro o il modo di lavorare non aiutano ad apprendere, lo diciamo e cerchiamo insieme una soluzione. Dopo le prime settimane torneremo su questo accordo per vedere che cosa funziona e che cosa va migliorato.</p>
+    </section>
+    <p class="closing">Questo accordo nasce dalle proposte raccolte durante le attività di avvio e può essere aggiornato insieme.</p>
+  </main>
+  <script>
+    const darkButton = document.getElementById('dark-toggle');
+    const dsaButton = document.getElementById('dsa-toggle');
+    function toggleMode(button, className, activeLabel, inactiveLabel) {
+      const active = document.body.classList.toggle(className);
+      button.setAttribute('aria-pressed', String(active));
+      button.textContent = active ? activeLabel : inactiveLabel;
+    }
+    darkButton.addEventListener('click', () => toggleMode(darkButton, 'dark-mode', 'Tema chiaro', 'Tema scuro'));
+    dsaButton.addEventListener('click', () => toggleMode(dsaButton, 'dsa-mode', 'Lettura standard', 'Lettura facilitata DSA/BES'));
+    document.getElementById('print-button').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
